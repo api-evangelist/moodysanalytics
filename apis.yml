@@ -1,23 +1,82 @@
 aid: moodysanalytics
+
 name: Moody's
-description: 'Moody''s is a company surfaced via the API Evangelist harvest backlog (source: g2-catalog)
-  and added to the network as a stub for full-pipeline profiling.'
+
+description: 'Moody''s provides credit ratings, research, data, analytics, and workflow solutions that help organizations assess and manage risk. Its offerings serve banks, buy‑side firms, insurers, corporations, public‑sector entities, and asset managers worldwide. The company operates under the Moody''s brand and is part of Moody''s Corporation.'
+
 url: https://raw.githubusercontent.com/api-evangelist/moodysanalytics/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:g2-catalog
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-10-25 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-10-25'
+
 modified: '2026-10-25'
+
 tags:
-- Company
-apis: []
+- Credit Ratings
+- Research
+- Data Analytics
+- Risk Management
+- Financial Services
+- Compliance
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: WellKnown
+  url: well-known/moodysanalytics-well-known.yml
+- type: Hosts
+  url: hosts/moodysanalytics-hosts.yml
+- type: Vendors
+  url: vendors/moodysanalytics-vendors.yml
+- type: SDKs
+  url: packages/moodysanalytics-packages.yml
+- type: Packages
+  url: packages/moodysanalytics-packages.yml
+- type: TermsOfService
+  url: https://community.moodysanalytics.com/site/terms
+- type: Login
+  url: https://hub.moodysanalytics.com/api/auth/signIn
+- type: GettingStarted
+  url: https://hub.moodysanalytics.com/gettingstarted
+- type: Documentation
+  url: https://developer.moodysanalytics.com/
+- type: GitHubOrganization
+  url: https://github.com/moodysanalytics
+- type: DomainSecurity
+  url: security/moodysanalytics-domain-security.yml
 - type: Website
   url: https://moodysanalytics.com/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  method: derived
+  generated: '2026-10-25'
+  generator: derive-coverage.py (pre-flight evidence)
+  detail: >-
+    the company publishes no developer documentation host and no machine-readable contract on its own domain
+  evidence:
+  - url: https://community.moodysanalytics.com/mcp
+    status: 403
+  - url: https://moodysanalytics.com/
+    status: 200
+x-enrichment:
+  date: '2026-10-25'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

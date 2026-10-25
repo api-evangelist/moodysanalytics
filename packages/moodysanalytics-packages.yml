@@ -1,0 +1,16 @@
+generated: '2026-10-25'
+method: probed
+generator: harvest-packages.py
+source: registry metadata endpoints (registry.npmjs.org, pypi.org, rubygems.org, api.nuget.org, packagist.org, crates.io) ; github.com/moodysanalytics
+ownership_rule: 'official: true only when the registry metadata (homepage, repository, author, URLs) names the provider''s domain (moodys.com,
+  moodysanalytics.com, security/moodysanalytics-domain-security.yml) or its accepted GitHub org (moodysanalytics).'
+packages:
+- name: apic
+  registry: github
+  url: https://github.com/moodysanalytics/apic
+  language: Python
+  official: true
+  version: null
+  published: '2024-07-26'
+  source_repo: https://github.com/moodysanalytics/apic
+  evidence: repository in github.com/moodysanalytics, whose profile names the provider's domain

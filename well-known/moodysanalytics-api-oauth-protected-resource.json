@@ -1,0 +1,1 @@
+{"resource":"https://api.moodys.com/genai-ready-data","authorization_servers":["https://api.moodys.com/genai-ready-data"],"scopes_supported":["mcp","claudeai","openid","profile","email","mdcapp","tenants","groups"]}

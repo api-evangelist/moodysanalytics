@@ -1,0 +1,110 @@
+generated: '2026-10-25'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 8
+  own: 5
+  other_domain: 2
+  platform: 1
+  roles:
+  - api
+  - docs
+  - legal
+  - other
+  - source
+  - website
+hosts:
+- host: api.moodys.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: moodys.com
+  role: api
+  relation: other-domain
+- host: api.moodysanalytics.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: moodysanalytics.com
+  role: api
+  relation: own
+- host: community.moodysanalytics.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - TermsOfService
+  serves: []
+  registrable_domain: moodysanalytics.com
+  role: legal
+  relation: own
+- host: developer.moodysanalytics.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - namespace-probe
+  - well-known
+  types:
+  - Documentation
+  serves: []
+  status: 200
+  registrable_domain: moodysanalytics.com
+  role: docs
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: hub.moodysanalytics.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - docs-index
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  - GettingStarted
+  serves:
+  - docs
+  registrable_domain: moodysanalytics.com
+  role: docs
+  relation: own
+- host: moodysanalytics.com
+  found_by:
+  - pointer
+  - probed
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  serves:
+  - cdn
+  vendor: cloudflare
+  registrable_domain: moodysanalytics.com
+  role: website
+  relation: own
+- host: www.moodys.com
+  found_by:
+  - probed
+  - site-links
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: moodys.com
+  role: other
+  relation: other-domain
